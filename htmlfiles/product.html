@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+            margin: 0;
+            padding: 0;
+            background-color: lightgrey;
+        }
+        header {
+            background-color: rgb(116, 116, 116);
+            font-size: 15px;
+            text-align: center;
+            padding: 3px 0;
+            color: #fff;
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; Centering navigation vertically */
+        }
+        
+        .title h1 {
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin-right: 20px;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            text-decoration: underline;
+        }
+
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a{
+            color: black;
+            padding: 12px 16px;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+
+        .dropdown-content a:hover{
+            background-color: #f1f1f1
+        }
+        
+        .container {
+            text-align: center;
+            color:sienna;
+        }
+        .gadgets-container {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            display: inline-block;
+            width: 201px;
+            vertical-align: top;
+            height: 600px;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .gadgets-container h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+        }
+         
+        .gadgets-container h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+        }
+
+        .container {
+            text-align: center;
+            color:rgb(0, 0, 0);
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+        }
+
+        .gadgets-container img {
+            width: 100%;
+            margin-bottom: 10px;
+            cursor: pointer; /* Change cursor to pointer when hovering over images */
+        }
+        footer {
+            background-color: rgb(116, 115, 115);
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .gadgets-container p {
+            text-align: left;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 14px;
+            color: #8d8383;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+        }
+
+        .gadgets-container:hover{
+            transform: scale(0.96);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="title">
+            <h1>ELECTRONICS GADGETS</h1>
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:3000">Home</a></li>
+                    <li><a href="http://localhost:3000/aboutus">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Contact</a>
+                        <div class="dropdown-content">
+                            <a href="mailto:princevpansuriya@gmail.com">Email</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="gadgets">
+        <!-- Product Gadgets -->
+        <div class="gadgets-container" onclick='redirectToCustomerPage("P1001")'>
+            <h2>Smart Phone</h2>
+            <img src="/newphone.jpg" alt="Smart Phone" >
+            <p>Price: 1,15,000</p>
+            <h3>Description</h3>
+            <p>A new, larger 6.7-inch size joins the popular 6.1-inch design, featuring a new dual-camera system, Crash Detection, a smartphone industry-first safety service with Emergency SOS via satellite, and the best battery life on iPhone.</p>
+        </div>
+
+        <div class="gadgets-container" onclick='redirectToCustomerPage("P1002")'>
+            <h2>Smart TV</h2>
+            <img src="/tv (1).jpg" alt="Smart TV" >
+            <p>Price: 1,00,000</p>
+            <h3>Description</h3>
+            <p>Featuring a Full HD display, this LG smart TV renders all your visuals in high definition. Thanks to its Advanced Magic Remote and Miracast technology, this smart TV lets you connect it to a wide range of smart devices, such as smartphones and tablets.
+                Equipped with a built-in WiFi chip, this LG TV allows you to stream content directly from the Internet. </p>       
+        </div>
+
+        <div class="gadgets-container" onclick='redirectToCustomerPage("P1003")'>
+            <h2>Laptop</h2>
+            <img src="/nl.jpg" alt="Laptop" >
+            <p>Price: 2,00,000</p>
+            <h3 >Description</h3>
+            <p>The Dell G15 is a 15.6-inch budget gaming laptop1. It is available with an Intel Core i5-12500H or i7-12700H CPU and various NVIDIA GeForce GPUs, from an RTX 3050 to an RTX 3070 Ti1. The laptop has a sleek design and supports up to a 120Hz refresh rate2.
+            The G15 starts at $849 for a modest configuration with an Intel Core i5 CPU, 8GB of RAM, and a 256GB SSD.</p>
+        </div>
+
+        <div class="gadgets-container" onclick='redirectToCustomerPage("P1004")'>
+            <h2>Camera</h2>
+            <img src="/nc.jpg" alt="Camera" >
+            <p>Price: 2,05,000</p>
+            <h3>Description</h3>
+            <p>The Z8 is the best mirrorless camera Nikon yet made, and arguably the best camera it's ever produced.
+            Its AF is some of the best we've encountered, and Nikon has the edge in video with longer recording times and a wider selection of capture modes and codecs. <p>
+        </div>
+
+        <div class="gadgets-container" onclick='redirectToCustomerPage("P1005")'>
+            <h2>Headphone</h2>
+            <img src="/hp.jpg" alt="Headphone" >
+            <p>Price: 1,00,000</p>
+            <h3>Description</h3>
+            <p>The Sony WH-1000XM4 is a wireless noise cancelling headphone that lets you enjoy music without worrying about wires.
+            The WH-1000XM4 is the best noise cancelling headphone you can get in the market. The WH-1000XM4 is a wireless noise cancelling headphone that lets you enjoy music without worrying about wires. </p>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Electronic Shop. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Section -->
+    <script>
+        // JavaScript function to redirect to customer page
+        function redirectToCustomerPage(pid) {
+            window.location.href = `http://localhost:3000/product/${pid}`;
+        }
+        
+    </script>
+</body>
+</html>

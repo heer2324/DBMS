@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order ID Input</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: lightgrey;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    }
+
+    /*header*/
+
+    header {
+        background-color: rgb(116, 116, 116);
+        color: #fff;
+        text-align: center;
+    }
+    .title {
+        display: flex;
+        justify-content: space-between;
+    }
+    .title h1 {
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin-right: 20px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    nav ul li a:hover{
+        text-decoration: underline;
+    }
+
+    /* Dropdown menu */
+    .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a{
+        color: black;
+        padding: 12px 16px;
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content{
+        display: block;
+    }
+
+    .dropdown-content a:hover{
+        background-color: #f1f1f1
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 150px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .input-field:focus {
+        outline: none;
+        border-color: #babbbc;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    .btn {
+        background-color: #515151;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+ <!-- Header -->
+ <header>
+    <div class="title">
+        <h1>Delete Order</h1>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:3000">Home</a></li>
+                <li><a href="http://localhost:3000/aboutus">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Contact</a>
+                    <div class="dropdown-content">
+                        <a href="mailto:princevpansuriya@gmail.com">Email</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <h2>Enter Order ID</h2>
+    <form method="post" action="/delorder">
+        <input type="text" id="orderId" name="orderId" class="input-field" placeholder="Enter Order ID">
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

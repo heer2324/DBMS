@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Store Homepage</title>
+
+    <!-- Styles -->
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        /* Header */
+        header {
+            background-color: rgb(116, 116, 116);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+        }
+        .title h1 {
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        nav ul li a:hover{
+            text-decoration: underline;
+        }
+        /* Dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:hover{
+            background-color: #f1f1f1
+        }
+        /* Categories */
+        .categories header {
+            background-color: rgb(165, 162, 162);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .title1{
+            display: center;
+            justify-content: space-between;
+        }
+        .other ul li{
+            margin: 0 10px;
+        }
+        .other ul li a{
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        /* Dropdown menu 2 */
+        .down {
+            position: relative;
+            display: inline-block;
+        }
+        .down-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .down-content a {
+            color: black !important;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .down:hover .down-content {
+            display: block;
+        }
+        /* Footer */
+        footer {
+            background-color: rgb(116, 115, 115);
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Slideshow */
+        .slideshow {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            align-items: center;
+            height: 70vh;
+        }
+        .slideshow .container {
+            margin: 0px auto;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .arrow {
+            height: 100px;
+            cursor: pointer;
+        }
+        .right {
+            transform: rotate(180deg);
+        }
+        .frame {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: -5px 5px 50px rgba(0, 0, 0, 0.5);
+        }
+        .slider {
+            display: flex;
+        }
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 1s ease;
+        }
+
+        /* Add CSS styles for radio buttons */
+        .radio-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            margin-top: 1px;
+            /* margin: 10px; */
+        }
+
+        .radio-btn {
+            display: none;
+        }
+
+        .radio-label {
+            cursor: pointer;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid #706d6d;
+            margin: 0 5px;
+        }
+
+        .radio-label:hover {
+            background-color: rgb(165, 162, 162);
+        }
+
+        .radio-btn:checked + .radio-label {
+            background-color: rgb(165, 162, 162);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="title">
+            <h1>ELECTRONIC STORE</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Contact</a>
+                        <div class="dropdown-content">
+                            <a href="mailto:princevpansuriya@gmail.com">Email</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Categories -->
+    <section class="categories">
+        <header>
+            <div class="title1">
+                <nav class="other">
+                    <ul>
+                        <li><a href="http://localhost:3000/product">Products</a></li>
+                        <li class="down">
+                            <a href="#" class="dropbtn1">Order Detail</a>
+                            <div class="down-content">
+                                <a href="http://localhost:3000/myorders">My Order</a>
+                                <a href="http://localhost:3000/delorder">Delete Order</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+
+    <!-- Slideshow -->
+    <section class="slideshow">
+        <div class="container">
+            <img src="leftarrow.jpeg" class="arrow left" alt="Left Arrow">
+            <div class="frame">
+                <div class="slider">
+                    <img src="newphone.jpg" class="image" alt="Smart Phone">
+                    <img src="tv (1).jpg" class="image" alt="Smart Tv">
+                    <img src="nl.jpg" class="image" alt="Laptop">
+                    <img src="nc.jpg" class="image" alt="Camera">
+                    <img src="hp.jpg" class="image" alt="HeadPhone">
+                </div>
+            </div>
+            <img src="leftarrow.jpeg" class="arrow right" alt="Right Arrow">
+        </div>
+    </section>
+
+     <!-- Radio buttons container -->
+     <div class="radio-container">
+        <input type="radio" id="radio1" name="slider" class="radio-btn">
+        <label for="radio1" class="radio-label"></label>
+        <input type="radio" id="radio2" name="slider" class="radio-btn">
+        <label for="radio2" class="radio-label"></label>
+        <input type="radio" id="radio3" name="slider" class="radio-btn">
+        <label for="radio3" class="radio-label"></label>
+        <input type="radio" id="radio4" name="slider" class="radio-btn">
+        <label for="radio4" class="radio-label"></label>
+        <input type="radio" id="radio5" name="slider" class="radio-btn">
+        <label for="radio5" class="radio-label"></label>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Electronics Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // JavaScript for slideshow
+        const left = document.querySelector('.left');
+        const right = document.querySelector('.right');
+        const slider = document.querySelector('.slider');
+        const image = document.querySelectorAll('.image');
+        const radioButtons = document.querySelectorAll('.radio-btn');
+
+        let sliderNumber = 1;
+        const length = image.length;
+        let intervalId;
+
+        // Function to move to the next slide
+        const nextSlide = () =>{
+            slider.style.transform = `translateX(-${400 * sliderNumber}px)`;
+            sliderNumber++;
+            updateRadioButtons();
+
+            if (sliderNumber > length) {
+                sliderNumber = 1; // Reset sliderNumber to 1 when it exceeds the length
+                slider.style.transform = `translateX(0)`; // Go back to the first slide
+            }
+        };
+
+        // Function to auto-slide
+        const autoslide = () =>{
+            intervalId = setInterval(() => {
+                nextSlide();
+            }, 2000); // Change slide after 2 seconds
+        };
+
+        // Function to move to the previous slide
+        const PrevSlide = ()=> {
+            slider.style.transform = `translateX(-${400 * (sliderNumber - 2)}px)`;
+            sliderNumber--;
+
+            //update radiobutton
+            updateRadioButtons();
+        };
+
+        // Function to go to the first slide
+        const updateRadioButtons = () => {
+            radioButtons.forEach((radio, index) => {
+                radio.checked = index === sliderNumber - 1;
+            });
+        };
+        // Function to go to the last slide
+        const getLastSlide = ()=> {
+            slider.style.transform = `translateX(-${(length-1) * 400}px)`;
+            sliderNumber = length;
+
+            //update radiobutton
+            updateRadioButtons();
+        };
+
+        //Function to update the radio-button cureent state
+
+        const UpdateradioButton =()=>{
+            radioButtons.forEach((radio,index) => {
+                radio.checked = ( index === sliderNumber - 2 );
+            });
+        };
+        
+        // Event listeners for arrow clicks
+        right.addEventListener('click',()=>{
+            if(sliderNumber < length){
+                nextSlide();
+            }else{
+                getFirstSlide();
+                updateRadioButtons();
+            }
+            autoslide();
+        });
+
+        left.addEventListener('click',()=>{
+            if(sliderNumber > 1){
+                PrevSlide();
+                updateRadioButtons();
+            }else{
+                getLastSlide();
+                updateRadioButtons();
+            }
+            autoslide();
+        });
+
+        autoslide(); // Start the slideshow
+    </script>
+</body>
+</html>
+        

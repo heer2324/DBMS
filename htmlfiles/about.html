@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+        }
+        /* Header */
+        header {
+            background-color:rgb(116, 116, 116);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+        }
+        .title h1 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        nav ul li a:hover{
+            text-decoration: underline;
+        }
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a{
+            color: black;
+            padding: 12px 16px;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+
+        .dropdown-content a:hover{
+            background-color: #f1f1f1
+        }
+
+        /* About Us section */
+        .about-us {
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            color:rgb(0, 0, 0);
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+            animation: fadeInUp 1.5s ease;
+            h1{
+            font-size: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin-left: 250px;
+            }
+
+            h2{
+                font-size: 38px;
+                text-align: left;
+                margin-left: 50px;
+                margin-right: 50px;
+                color:black;
+            }
+        }
+
+        .container p{
+            font-size: 20px;
+            text-align: left;
+            line-height: 1.5;
+            margin:50px;
+            color:black;
+            animation: fadeInUp 1.5s ease;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+
+
+        }
+
+        .image{
+            width: 670px;
+            margin-right: 30px;
+            margin-top: 180px;
+            animation:backwards fadeInUp 1.5s ease;
+        }
+
+        img{ 
+            width: 100%;
+            border-radius: 10px;
+        }  
+
+        @media screen and (max-width: 800px){
+            .about-us{
+                margin:0px;
+            }
+            .container{
+                width:100%;
+                flex-direction: column;
+            }
+
+            .container h1{
+                font-size: 40px;
+                margin:50px;
+            }
+
+            .conatiner h2{
+                font-size: 30px;
+            }
+
+            .conatiner p{
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .image{
+                width:100%;
+            }
+        }
+
+        @keyframes fadeInUp{
+            0%{
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        /* About team */
+        .team{
+            margin-top: 10px;
+            margin-bottom: 100px;
+        }
+
+        .team h2{
+            font-size: 38px;
+            text-align: left;
+            margin-left: 50px;
+            margin-right: 50px;
+            animation: fadeInUp 1.5s ease;    
+        }
+
+        .team p{
+            font-size: 20px;
+            text-align: left;
+            line-height: 1.5;
+            margin:50px;
+            animation: fadeInUp 1.5s ease;    
+        }   
+
+        .team-members h3{
+
+            font-size: 30px;
+            text-align: left;
+            margin-left: 50px;
+            margin-right: 50px;
+            animation: fadeInUp 1.5s ease;    
+        }
+
+        .team-members .member h4{
+            font-size: 20px;
+            text-align: left;
+            margin-left: 50px;
+            margin-right: 50px; 
+            animation: fadeInUp 1.5s ease;    
+        }
+
+        @media screen and (max-width: 800px){
+
+            .team-members .member{
+                width: 100%;
+            }
+
+            .team-members .member h4{
+                font-size: 18px;
+            }
+
+            .team-members .member p{
+                font-size: 16px;
+            }
+
+            .team-members{
+                width: 100%;
+            }
+
+            .team-members h3{
+                font-size: 26px;
+            }
+
+            .team p{
+                font-size: 18px;
+            }
+
+        }
+
+        @keyframes fadeInUp{
+            0%{
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(116, 115, 115);
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>About Us</h1>
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:3000">Home</a></li>
+                    <li><a href="http://localhost:3000/aboutus">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Contact</a>
+                        <div class="dropdown-content">
+                            <a href="princevpansuriya@gmail.com">Email</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-us">
+        <div class="container">
+            <h1>Welcome To Electronic Store</h1>
+            <h2>Who are We</h2>
+            <p>We're not just another online electronics store. We're a team of tech enthusiasts who believe that everyone deserves access to high-quality, affordable electronics. Whether you're a seasoned techie or just dipping your toes into the world of gadgets, we're here to help you find exactly what you need.</p>
+        </div>
+        <div class="image"><img src="x.jpg"></div>
+    </section>
+
+    <section class="about-team">
+        <div class="team">
+            <h2>Meet Our Team</h2>
+            <p>We are a group of enthusiastic and dedicated Computer Science undergraduates studying at Pandit Deendayal Energy University (PDEU) in Gandhinagar, India. As students passionate about technology and innovation, we have come together to collaborate on a project that forms a vital component of our curriculum, focusing on the subject of DataBase Management System.
+                As Computer Science undergraduates at PDEU, we share a common aspiration to excel academically and make meaningful contributions to the field of technology. Through our collaboration on this project, we aim to deepen our understanding of DataBase Management System, hone our technical skills, and cultivate a spirit of innovation and inquiry. Beyond academic pursuits, we aspire to apply our knowledge and expertise to real-world challenges, making a positive impact on society and shaping the future of technology.</p>
+            <div class="team-members">
+                <h3>Team Members</h3>
+                <div class="member">
+                    <h4><li>Prince Pansuriya</li></h4>
+                    <h4><li>Hir Rupareliya</li></h4>
+                </div>
+        </div>
+    </section>
+</body>
+</html>
